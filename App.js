@@ -45,7 +45,7 @@ let guardarNotas = () =>{
       if(notaUno >=0 && notaUno <= 5 && notaDos >= 0 && notaDos<= 5 && notaTres>= 0 && notaTres <=5){
         let definitiva = parseFloat(notaUno) + parseFloat(notaDos) + parseFloat(notaTres);
         let promedio = parseFloat(definitiva) /3 ;
-        setDefinitiva(`La nota definitiva es de:  ${promedio.toFixed(2)}`)
+        setDefinitiva(`La nota definitiva es de: ${promedio.toFixed(2)}`)
         if(promedio >= 2.99 && promedio <=5){
           setObservacion(nombre + " ha aprobado " + asignatura);
       } else if(promedio >= 1.99 && promedio <=3){
