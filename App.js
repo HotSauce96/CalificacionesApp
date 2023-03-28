@@ -151,7 +151,7 @@ let buscarNotas = () => {
            value={observacion}
         />
       <View style={styles.row}>
-        <TouchableOpacity style={styles.button} onPress={guardarNotas}>
+        <TouchableOpacity style={styles.button} onPress={guardarNotas} textAlignVertical="center" >
           <Text>Guardar notas</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={mostrarNotas}>
@@ -167,7 +167,6 @@ let buscarNotas = () => {
         </TouchableOpacity>
       </View>
         <view style={{flexDirection: 'row', marginTop:30}}>
-          
         </view>
         <StatusBar style="auto"/>
       </View>
@@ -180,21 +179,22 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor: '#e9ecef',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+ 
   },
   secondaryContainer: {
-  backgroundColor: '#e2eafc',
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.8,
-  shadowRadius: 20,
-  elevation: 1,
-  flex:1,
-  width:'35%',
-  borderRadius: 20,
-  margin:'2%',
-  justifyContent: 'center',
-  alignItems: 'center',
+    backgroundColor: '#e2eafc',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+    elevation: 1,
+    flex:1,
+    width:'35%',
+    borderRadius: 20,
+    margin:'2%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   inputs:{
     width:'75%',
@@ -210,22 +210,32 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginBottom: 4
 }, 
+  row: {
+    flexDirection: 'row',
+    marginBottom: 20,
+    marginLeft: 5,
+  },
   button: {
       flex: 1,
       textAlign:'center',
       width:'12rem',
-      fontWeight:'bold',
-      backgroundColor: '#eaf4f4',
-      borderRadius: 10,
       textTransform: "uppercase",
       padding: 9,
       position: 'relative',
-      marginTop: 6,
-      marginBottom: 12,
+      marginTop: 2,
+      marginLeft: 15,
+      marginRight: 15,
+      marginBottom: 2,
       paddingBottom: 10,
-      borderStyle: 'solid',
-      borderColor: '#212529',
-      borderWidth:  3
-  }
+      backgroundColor: '#8E9ECC',
+      backdropFilter: blur('10px'),
+      border: 'none',
+      borderRadius: '10px',
+      color: '#FFFFFF',
+      fontSize: '18px',
+      padding: '12px 24px',
+      textShadow: '1px 1px 1px rgba(0, 0, 0, 0.3)',
+      transition: 'background-color 0.3s ease-in-out',  
+}
 
 })
