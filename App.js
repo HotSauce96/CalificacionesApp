@@ -47,12 +47,12 @@ let guardarNotas = () =>{
         let promedio = parseFloat(definitiva) /3 ;
         setDefinitiva(`La nota definitiva es de:  ${promedio.toFixed(2)}`)
         if(promedio >= 2.99 && promedio <=5){
-        setObservacion("El estudiante ha aprobado");
+          setObservacion(nombre + " ha aprobado " + asignatura);
       } else if(promedio >= 1.99 && promedio <=3){
-        setObservacion("El estudiante queda habilitando")
+          setObservacion(nombre + " queda habilitando " + asignatura)
         }
         else {
-        setObservacion("El estudiante ha reproado, debe repetir")
+         setObservacion(nombre + " ha reprobado, debe repetir " + asignatura)
       }
     } else { alert("las notas solamente pueden ser de 0 a 5") }
   }
